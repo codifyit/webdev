@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Operators</h1>
+<h2>The typeof Operator</h2>
+<p>The typeof operator returns the type of a variable or an expression.</p>
+
+<p>La suma es:</p>
+<p id="suma"></p>
+<p>La resta es:</p>
+<p id="resta"></p>
+<p>La multiplicacion es:</p>
+<p id="multiplicacion"></p>
+<p>La division es:</p>
+<p id="division"></p>
+<p>El resto es:</p>
+<p id="resto"></p>
+
+<script>
+    let x=2;
+    let y=8;
+    let z=0;
+
+    //adding operator
+    z=x+y;
+    document.getElementById("suma").innerHTML=z;
+
+    //substraction operator
+    z=y-x;
+    document.getElementById("resta").innerHTML=z;
+
+    //multiplication operator
+    z=x*y;
+    document.getElementById("multiplicacion").innerHTML=z;
+
+    //division operator
+    z=y/x;
+    document.getElementById("division").innerHTML=z;
+
+    //remainder operator
+    z=y%x;
+    document.getElementById("resto").innerHTML=z;
+
+    //increment operator
+    x++; //x=x+1
+    console.log(x);
+
+    //decrement operator
+    y--; //y=y-1
+    console.log(y);
+</script>
+</body>
+</html>
