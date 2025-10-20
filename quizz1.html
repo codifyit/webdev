@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="message"></p>
+   <script>
+        //Pedir la edad y calcular si
+        //es mayor de edad o no
+        let edad = prompt("Dime tu edad:");
+        if(edad>=18){
+            document.getElementById("message").innerHTML="Eres mayor de edad";
+        } else {
+            document.getElementById("message").innerHTML="Eres menor de edad";
+        }
+        
+   </script> 
+</body>
+</html>
