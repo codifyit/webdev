@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+<body>
+   <script>
+        let x = 0; //Number type
+        let y ="0"; //String type
+        x = y; //Automatic conversion type
+        document.write(typeof(x)+"<br>"); //typeof gets the type of the variable
+        x = Number(y);//specific conversion data types String -> Number
+        document.write(typeof(x)+"<br>");
+        y="a";
+        x = Number(y);
+        document.write("x value is " +
+            x + ", x data type is " + typeof(x) + "<br>");
+        x=0; //change the value of x
+        y = String(x); //specific conversion data types Number -> String
+        document.write("y value is " +
+            y + ", y data type is " + typeof(y));
+   </script> 
+</body>
+</html>
