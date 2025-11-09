@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types conversions</title>
+</head>
+<body>
+    <script>
+        //Boolean type conversions
+        let bool = false;
+        let n=Number(bool); //specific conversion from Boolean to Number
+        document.write("n type is " + typeof(n) +
+            " n value is " + n + "<br>");
+        
+        //Number -> Boolean conversions
+        bool = Boolean(n+1); //the value of n is 0
+        document.write("bool value is " + bool + "<br>");
+
+        //Boolean -> String conversions
+        let s = String(bool); //specific conversion 
+                               //from Boolean to String
+
+        document.write("s value is " + s +
+            ", s type is " + typeof(s) + "<br>");
+        
+        //String -> Boolean
+        s="a";
+        bool = Boolean(s);
+        document.write("bool value is " + bool +
+            ", bool type is " + typeof(bool));
+
+        n = 5;
+        s = "5";
+        let res = false + false; // JavaScript converts num to string
+        console.log(res);
+        console.log(typeof(res));
+        
+    </script>
+</body>
+</html>
