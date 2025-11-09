@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block scopes</title>
+</head>
+<body>
+    <script>
+        //x var is accesible inside and outside of blocks
+        for(var x=0;x<10;x++){
+            console.log(x);
+        }
+        console.log(x);
+        //y var is accesible inside and outside of blocks
+        for(let y=0;y<10;y++){
+            console.log(y);
+        }
+        console.log(y);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical scope</title>
+</head>
+
+<body>
+    <script>
+        //The variable is declared inside the function and can 
+        //only be accessed inside that block or nested block is 
+        //called lexical scope.
+        function func1() {
+            let x = 10;
+
+            function func2() {
+                //x is accesible inside this function
+                let y = 20;
+                console.log(`${x} ${y}`);
+            }
+
+            func2();
+        }
+
+        func1();
+    </script>
+</body>
+
+</html>

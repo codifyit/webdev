@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global scope</title>
+</head>
+
+<body>
+    <script>
+        //A global variable refers to a variable that is 
+        //declared outside any function or block, so it 
+        //can be used anywhere in the program, 
+        //both inside functions and in the main code.
+
+        // Global Variable accessed from within a function 
+        const x = 10;
+
+        function fun1() {
+            console.log(x);
+        }
+
+        fun1();
+    </script>
+</body>
+
+</html>

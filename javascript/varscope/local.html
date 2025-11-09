@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local scope</title>
+</head>
+
+<body>
+    <script>
+        //A local variable is a variable declared inside a function, 
+        //making it accessible only within that function. 
+        //It cannot be used outside the function
+        function fun2() {
+
+            // This variable is local to fun2() and 
+            // cannot be accessed outuside this function
+            let x = 10;
+            console.log(x);
+        }
+
+        fun2();
+    </script>
+</body>
+
+</html>
