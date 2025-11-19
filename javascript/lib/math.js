@@ -1,6 +1,6 @@
 let result=0; //result
-let op1=0; //operand 1
-let op2=0; //operand 2
+let op1=''; //operand 1
+let op2=''; //operand 2
 let operator=''; //the operator
 let readOp1=true; //boolean swith to read op1
 let readOp2=false; //boolean swith to read op2
@@ -31,6 +31,7 @@ function opAssign(lastButton){
         //if last button was +,*,/,- then complete operation, read op2
         readOp2=true;
         readOp1=!readOp2;
+        operator=lastButton;
     }
     //else read op1 or op2
     if(readOp1){
