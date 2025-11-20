@@ -29,10 +29,12 @@
             //read the selected option 
             let opcion = document.getElementById('opcion').value;
 
-            if (typeof (opcion) == "number") {
+            if (typeof (Number(opcion)) == "number") {
                 if (opcion == '1' || opcion == '2' || opcion == '3') {
                     //updating the order
-                    document.getElementById('pedido').innerHTML = opcion;
+                    document.getElementById('pedido').innerHTML = 
+                    "Ha elegido la opción de menú " + opcion
+                    + " , ¡muchas gracias!";
                 }
             }
         }
