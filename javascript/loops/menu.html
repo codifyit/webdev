@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebab menú</title>
+</head>
+
+<body>
+    <p>Menú para llevar</p>
+    <ol>
+        <li>Durum de pollo</li>
+        <li>Durum mixto</li>
+        <li>Kebab 2 salsas</li>
+    </ol>
+    <p>Indique el número del plato</p>
+    <p>
+        <input type="text" id="opcion" />
+        <br>
+        <input type="button" value="Pedir" onclick="mostrarPedido()" />
+    </p>
+    <p id="pedido">
+        Su pedido está vacío, elija una opción del menú
+    </p>
+
+    <script>
+        function mostrarPedido() {
+            //read the selected option 
+            let opcion = document.getElementById('opcion').value;
+
+            if (typeof (opcion) == "number") {
+                if (opcion == '1' || opcion == '2' || opcion == '3') {
+                    //updating the order
+                    document.getElementById('pedido').innerHTML = opcion;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
