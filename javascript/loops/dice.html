@@ -26,8 +26,9 @@
                 if(intento<3){
                     alert('Una pena, inténtalo de nuevo');
                     intento++;
+                    document.getElementById('intento').innerHTML=intento;
                 }else{
-                    alert('El juego ha terminado, gracias!')
+                    alert('El juego ha terminado, gracias!');
                 }
             }
         }
