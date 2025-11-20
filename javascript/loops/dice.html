@@ -18,7 +18,7 @@
             //Math is the library with many mathematics functions
             //random generates a value between zero and the number in the
             //parameter
-            let aleatorio = Math.random(6);
+            let aleatorio = Math.round(Math.random()*10*6)+1;
             numero = document.getElementById('numero').value;
             if(intento <3 && numero==aleatorio){
                 alert('Muy bien, has acertado!');
