@@ -14,8 +14,10 @@
         <table>
             <tr>
                 <td colspan="3">
-                    <div style="border-width: 1px;border-radius:5px;
-                    background-color: #E4F754;">Texto
+                    <div id="display" style="border-width: 1px;border-radius:5px;
+                    background-color: #E4F754; text-align: right;
+                    vertical-align: middle;
+                    padding-right: 3%;">0
                         
                     </div>
                 </td>
@@ -43,10 +45,19 @@
             <tr>
                 <td><input type="button" value="-" onclick="opAssign('-')"></td>
                 <td><input type="button" value="/" onclick="opAssign('/')"></td>
-                <td><input type="button" value="=" onclick="opAssign('=')"></td>
+                <td><input type="button" value="=" onclick="doCalc()"></td>
             </tr>
         </table>
     </form>
 </body>
-
+<script>
+    /**
+     * Calling when finish the calculation
+     **/
+    function doCalc(){
+        opAssign('=');
+        let result = getResult();
+        document.getElementById('display').innerHTML=result;
+    }
+</script>
 </html>
