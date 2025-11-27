@@ -58,6 +58,7 @@
     function doCalc(){
         opAssign('=');
         let result = getResult();
+        display="";
         showDataDisplay(result);
     }
     function doAssign(buttonKey){
@@ -66,7 +67,7 @@
     }
     function showDataDisplay(data){
         display+=data;
-        document.getElementById('display').innerHTML+=display;
+        document.getElementById('display').innerHTML=display;
     }
 </script>
 </html>
