@@ -51,6 +51,7 @@
     </form>
 </body>
 <script>
+    let display="";
     /**
      * Calling when finish the calculation
      **/
@@ -64,7 +65,8 @@
         showDataDisplay(buttonKey);
     }
     function showDataDisplay(data){
-        document.getElementById('display').innerHTML=data;
+        display+=data;
+        document.getElementById('display').innerHTML+=display;
     }
 </script>
 </html>
