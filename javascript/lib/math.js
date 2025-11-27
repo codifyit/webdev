@@ -32,9 +32,7 @@ function opAssign(lastButton){
         readOp2=true;
         readOp1=!readOp2;
         operator=lastButton;
-    }
-    //else read op1 or op2
-    if(readOp1){
+    }else if(readOp1){
         //read to assign value op1
         op1=op1+lastButton;
     }else{
