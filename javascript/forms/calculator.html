@@ -23,28 +23,28 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="button" value="0" onclick="opAssign(0)"></td>
-                <td><input type="button" value="1" onclick="opAssign(1)"></td>
-                <td><input type="button" value="2" onclick="opAssign(2)"></td>
+                <td><input type="button" value="0" onclick="doAssign(0)"></td>
+                <td><input type="button" value="1" onclick="doAssign(1)"></td>
+                <td><input type="button" value="2" onclick="doAssign(2)"></td>
             </tr>
             <tr>
-                <td><input type="button" value="3" onclick="opAssign(3)"></td>
-                <td><input type="button" value="4" onclick="opAssign(4)"></td>
-                <td><input type="button" value="5" onclick="opAssign(5)"></td>
+                <td><input type="button" value="3" onclick="doAssign(3)"></td>
+                <td><input type="button" value="4" onclick="doAssign(4)"></td>
+                <td><input type="button" value="5" onclick="doAssign(5)"></td>
             </tr>
             <tr>
-                <td><input type="button" value="6" onclick="opAssign(6)"></td>
-                <td><input type="button" value="7" onclick="opAssign(7)"></td>
-                <td><input type="button" value="8" onclick="opAssign(8)"></td>
+                <td><input type="button" value="6" onclick="doAssign(6)"></td>
+                <td><input type="button" value="7" onclick="doAssign(7)"></td>
+                <td><input type="button" value="8" onclick="doAssign(8)"></td>
             </tr>
             <tr>
-                <td><input type="button" value="9" onclick="opAssign(9)"></td>
-                <td><input type="button" value="*" onclick="opAssign('*')"></td>
-                <td><input type="button" value="+" onclick="opAssign('+')"></td>
+                <td><input type="button" value="9" onclick="doAssign(9)"></td>
+                <td><input type="button" value="*" onclick="doAssign('*')"></td>
+                <td><input type="button" value="+" onclick="doAssign('+')"></td>
             </tr>
             <tr>
-                <td><input type="button" value="-" onclick="opAssign('-')"></td>
-                <td><input type="button" value="/" onclick="opAssign('/')"></td>
+                <td><input type="button" value="-" onclick="doAssign('-')"></td>
+                <td><input type="button" value="/" onclick="doAssign('/')"></td>
                 <td><input type="button" value="=" onclick="doCalc()"></td>
             </tr>
         </table>
@@ -57,7 +57,14 @@
     function doCalc(){
         opAssign('=');
         let result = getResult();
-        document.getElementById('display').innerHTML=result;
+        showDataDisplay(result);
+    }
+    function doAssign(buttonKey){
+        opAssign(buttonKey);
+        showDataDisplay(buttonKey);
+    }
+    function showDataDisplay(data){
+        document.getElementById('display').innerHTML=data;
     }
 </script>
 </html>
