@@ -5,7 +5,11 @@ let operator=''; //the operator
 let readOp1=true; //boolean swith to read op1
 let readOp2=false; //boolean swith to read op2
 /*
-
+This function assigns the button key pushed
+author: Rafa
+version: 1.0
+Return value: undefined
+Params: lastButton(represents the key button pushed)
 */
 function opAssign(lastButton){
     //if last button was = then calculate and new operation, read op1
@@ -40,21 +44,6 @@ function opAssign(lastButton){
         op2=op2+lastButton;
     }
 }
-/*
-This function assign a value to op2
-*/
-function op2Assign(ope2){
-    op2 = ope2;
-}
-function sum(){
-    result = op1 + op2;
-}
-function substract(n1,n2){
-    result = n1 - n2;
-}
-function product(n1,n2){
-    result = n1 * n2;
-}
-function div(n1,n2){
-    result = n1 / n2;
+function getResult(){
+    return result;
 }
