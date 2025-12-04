@@ -49,12 +49,16 @@
         text1 = "Hello World!";
         text2 = text1.toLowerCase();
         document.writeln("toLowerCase()=" + text2 + "<br>");
-        
+
         //isWellFormed()
         text = "Hello world!";
         let result = text.isWellFormed();
         document.writeln("isWellFormed()=" + result + "<br>");
 
+        //toWellFormed()
+        text = "Hello World \uD800";
+        result = text.toWellFormed();
+        document.writeln("toWellFormed()=" + result + "<br>");
     </script>
 </body>
 
