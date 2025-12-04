@@ -64,6 +64,31 @@
         text1 = "      Hello World!      ";
         text2 = text1.trim();
         document.writeln("trim()=" + text2 + "<br>");
+
+        //trimStart()
+        text1 = "     Hello World!     ";
+        text2 = text1.trimStart() + " algo";
+        document.writeln("trimStart()=" + text2 + "<br>");
+
+        //trimEnd()
+        text1 = "     Hello World!     ";
+        text2 = text1.trimEnd();
+        document.writeln("trimEnd()=" + text2 + "<br>");
+
+        //padStart()
+        text = "5";
+        let padded = text.padStart(4, "0");
+        document.writeln("padStart()=" + padded + "<br>"); //0005
+
+        //padEnd()
+        text = "5";
+        padded = text.padEnd(4, "0");
+        document.writeln("padStart()=" + padded + "<br>"); //5000
+
+        //repeat()
+        text = "Hello world!";
+        result = text.repeat(2);
+        document.writeln("repeat()=" + result + "<br>");
     </script>
 </body>
 
