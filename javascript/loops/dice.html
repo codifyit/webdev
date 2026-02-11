@@ -13,13 +13,13 @@
     <input type="button" value="Jugar" onclick="jugar()"/>
     <script>
         let intento=0;
-        function jugar(){
+        function jugar(intentosMax){
             //Math is the library with many mathematics functions
             //random generates a value between zero and the number in the
             //parameter
-            let aleatorio =  Math.round(Math.random()*6+1);
+            let aleatorio =  Math.trunc((Math.random()*6)+1);
             numero = document.getElementById('numero').value;
-            if(intento <3 && numero==aleatorio){
+            if(intento <intentosMax && numero==aleatorio){
                 alert('Muy bien, has acertado!');
             }else{
                 if(intento<3){
@@ -31,6 +31,7 @@
                 }
             }
         }
+        jugar(5);
     </script>
 </body>
 </html>

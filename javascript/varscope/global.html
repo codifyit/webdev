@@ -15,13 +15,14 @@
         //both inside functions and in the main code.
 
         // Global Variable accessed from within a function 
-        const x = 10;
-
+        let x = 10;
         function fun1() {
-            console.log(x);
+            console.log(x); //show the x value
+            x++; //increment x value adding 1
         }
-
-        fun1();
+        
+        fun1(); //calling the function fun1
+        console.log(x); //show x value
     </script>
 </body>
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta espacios en blanco en una cadena</title>
+</head>
+<body>
+    <script>
+        function contarEspacios(cadena){
+            //cuento el número de caracteres de la cadena original
+            let lonCadena = len(cadena); //guarda la longitud
+                                         //de la cadena
+            
+            //troceo la cadena según los espacios
+            //que encuentre. Termino de trocear
+            //cuando llegue al último carcácter de la cadena
+
+            //mientras la longitud de la cadena no sea
+            //0 tengo que seguir troceando
+            while(lonCadena>0 && posEspacio>0){
+                let posEspacio = cadena.indexOf(' ');
+                cadena = cadena.slice(posEspacio+1);
+                lonCadena = len(cadena);
+            }
+
+        }
+    </script>
+</body>
+</html>

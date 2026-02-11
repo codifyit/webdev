@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lexical scope</title>
 </head>
-
 <body>
     <script>
         //The variable is declared inside the function and can 
@@ -18,10 +17,12 @@
             function func2() {
                 //x is accesible inside this function
                 let y = 20;
-                console.log(`${x} ${y}`);
+                //console.log(`${x} ${y}`);
+                console.log(x + " " + y);
             }
 
             func2();
+            console.log(y);
         }
 
         func1();

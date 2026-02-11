@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to call JavaScript function in HTML?</title>
+</head>
+<body>
+    <!-- add a button to hello me!-->
+    <input type="button" value="Say me Hello!" onclick="hello()"></button>
+    <script>
+        function hello(){
+            let name = prompt("Give me your name, please:");
+            //+ operator with strings 
+            alert("Hello " + name);
+        }
+        function giveAge(){
+            let age = prompt("Give me your age, please:");
+            console.log(age);
+        }
+        //calling a function inside the script
+        giveAge();
+    </script>
+</body>
+</html>

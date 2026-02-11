@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function funcion(cadena){
+            //quiero comprobar si la cadena que
+            //se pasa como parámetro es de tipo cadena
+            let x = typeof cadena == 'string';
+
+            if(x==true){
+                return true;
+            }else{
+                return false;
+            }
+            return x;
+        }
+        let s = 'aaaa';
+        let n = 2;
+        let y = funcion(s);
+        alert(y);
+    </script>
+</body>
+</html>
