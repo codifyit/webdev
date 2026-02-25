@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .accordion {
+            background-color: #35b55b;
+            color: #fff;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #fff;
+            color:#35b55b;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        .subtit{
+            color:#35b55b;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('pueblos-blancos.png'); background-repeat: no-repeat; background-size: 100%;">
+
+    <h1 style="color: darkgreen;">Andaluces relevantes en ...</h1>
+
+    <p class="subtit">Área de relevancia</p>
+    <div>
+        <div style="max-width: 50%;float:left;">
+            <button class="accordion">Almería</button>
+            <div class="panel">
+                <p>Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona</p>
+            </div>
+
+            <button class="accordion">Cádiz</button>
+            <div class="panel">
+                <p>Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona</p>
+            </div>
+
+            <button class="accordion">Huelva</button>
+            <div class="panel">
+                <p>Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona</p>
+            </div>
+        </div>
+        <div style="text-align: center;">
+        <img src="andalucia1.png" usemap="#mapa-interactivo" 
+            alt="Andalucía" style="max-width: 50%;">
+        </div>
+    </div>
+    <script>
+        //variable para acceder al componente del acordeón, que serán todos los objetos HTML que tengan
+        //la clase 'accordion'
+        let acc = document.getElementsByClassName("accordion");
+
+        //bucle for para recorrer todos los objetos del documento HTML que tengan como clase de estilo
+        //'accordion'
+        for (let i = 0; i < acc.length; i++) {
+            //a cada objeto se le asigna la misma función al hacer clic sobre ellos
+            acc[i].addEventListener("click", function () {
+                //asigna a cada objeto del acordeón el estilo 'active'
+                this.classList.toggle("active");
+                //se obtiene el siguiente objeto HTML al objeto acordeón actual en la variable panel
+                var panel = this.nextElementSibling;
+                //comprueba si se ha asignado una altura máxima en las reglas de estilo del panel
+                if (panel.style.maxHeight) {
+                    //se quita la regla de estilo del panel que establece la altura máxima
+                    panel.style.maxHeight = null;
+                } else {
+                    //se asigna a la regla de estilo que establece la máxima altura del panel
+                    //el valor de la altura a partir de la cual se hace un scroll vertical.
+                    //Esto garantiza que se verá el contenido completo sin que aparezcan las barras
+                    //de desplazamiento vertical
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

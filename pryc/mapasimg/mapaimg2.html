@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mapa de Imagen con Tooltip</title>
+<style>
+  /* Opcional: Estilo básico para resaltar áreas al pasar el mouse */
+  area:hover { cursor: pointer; }
+</style>
+</head>
+<body>
+
+<h2>Mapa interactivo</h2>
+
+<!-- La imagen -->
+<img src="andalucia.jpg" usemap="#mapa-interactivo" alt="Mapa de ejemplo" style="max-width: 100%;">
+
+<!-- El mapa -->
+<map name="mapa-interactivo">
+  <!-- Área 1: Rectángulo (coords: x1,y1,x2,y2) -->
+  <area shape="rect" coords="34,44,270,350" href="#" title="Tooltip Área 1: Información detallada">
+  
+  <!-- Área 2: Círculo (coords: x,y,radio) -->
+  <area shape="circle" coords="400,150,50" href="#" title="Tooltip Área 2: Punto caliente">
+</map>
+
+</body>
+</html>
