@@ -3,78 +3,135 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon estándar -->
+    <link rel="icon" type="image/x-icon" href="andaluciaico.png">
+    
     <style>
-        .accordion {
-            background-color: #35b55b;
-            color: #fff;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
+        /*regla de estilo para el contenedor principal*/
+        .main{
+            display:flex;/**/
+            justify-content: center;/**/
+            align-items: center;/**/
+            border: 2px solid rgb(10, 67, 18);/**/
+            border-radius: 25px;/**/
         }
-
+        /*regla de estilo para los elementos del acordeón*/
+        .accordion {
+            background-color: #35b55b;/**/
+            color: #fff;/**/
+            cursor: pointer;/**/
+            padding: 18px;/**/
+            width: 100%;/**/
+            border: none;/**/
+            text-align: left;/**/
+            outline: none;/**/
+            font-size: 15px;/**/
+            transition: 0.4s;/**/
+        }
+        /*reglas de estilo para cambiar el aspecto de los elementos del acordeón cuando
+        se pasa el puntero del ratón por encima y cuando se hace clic sobre un elemento
+        de acordeón*/
         .active,
         .accordion:hover {
-            background-color: #fff;
+            background-color: #bae8c5;
             color:#35b55b;
         }
-
+        /*regla de estilo para añadir contenido y modificar el aspecto del mismo en un elemento de
+        acordeón*/
         .accordion:after {
-            content: '\002B';
-            color: #777;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
+            content: '\002B';/**/
+            font-weight: bold;/**/
+            float: right;/**/
+            margin-left: 5px;/**/
         }
-
+        /*regla de estilo para añadir contenido y modificar el aspecto del mismo en un elemento de
+        acordeón. Se aplica cuando la clase de estilo asignada al elemento de acordeón es
+        'active'*/
         .active:after {
             content: "\2212";
+            color:#35b55b;
         }
-
-        .panel {
-            padding: 0 18px;
+        /*regla de estilo para el contenedor con el contenido de cada elemento de acordeón*/
+        .accordion-content {
+            padding: 0 18px;/**/
             background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
+            max-height: 0;/**/
+            overflow: hidden;/**/
+            transition: max-height 0.2s ease-out;/**/
+            border: 1px solid rgb(220, 224, 220);
         }
+        /*regla de estilo para el subtítulo del documento*/
         .subtit{
             color:#35b55b;
         }
+        /*regla de estilo para el mapa*/
+        .map{
+            max-width: 50%;/**/
+            width: 40%;
+            margin:20px 20px 0px 0px; /**/
+            padding:10px;
+        }
+        /*reglas de estilo para el contenedor del acordeón*/
+        .container{
+            max-width: 50%;
+            margin:20px 20px 0px 0px;
+            padding:10px;
+        }
     </style>
+    <title>Andaluces relevantes en ...</title>
 </head>
 
-<body style="background-image: url('pueblos-blancos.png'); background-repeat: no-repeat; background-size: 100%;">
+<body>
 
     <h1 style="color: darkgreen;">Andaluces relevantes en ...</h1>
 
-    <p class="subtit">Área de relevancia</p>
-    <div>
-        <div style="max-width: 50%;float:left;">
+    <h2 class="subtit">Área de relevancia</h2>
+    <div class="main">
+        <img class="map" src="andalucia1.png" usemap="#mapa-interactivo" 
+            alt="Andalucía">
+
+        <div class="container">
             <button class="accordion">Almería</button>
-            <div class="panel">
-                <p>Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona</p>
+            <div class="accordion-content">
+                Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona
             </div>
 
             <button class="accordion">Cádiz</button>
-            <div class="panel">
-                <p>Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona</p>
+            <div class="accordion-content">
+                Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona
+            </div>
+
+            <button class="accordion">Córdoba</button>
+            <div class="accordion-content">
+                Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona
             </div>
 
             <button class="accordion">Huelva</button>
-            <div class="panel">
-                <p>Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona</p>
+            <div class="accordion-content">
+                Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona
+            </div>
+
+            <button class="accordion">Jaén</button>
+            <div class="accordion-content">
+                Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona
+            </div>
+
+            <button class="accordion">Málaga</button>
+            <div class="accordion-content">
+                Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona
+            </div>
+
+            <button class="accordion">Sevilla</button>
+            <div class="accordion-content">
+                Crea aquí una lista no ordenada con los nombres completos y el reconocimiento de cada persona
             </div>
         </div>
-        <div style="text-align: center;">
-        <img src="andalucia1.png" usemap="#mapa-interactivo" 
-            alt="Andalucía" style="max-width: 50%;">
-        </div>
+    
     </div>
+    <p style="text-align: center;">
+    <a href="https://www.flaticon.es/iconos-gratis/andalucia" target="_blank" 
+            title="andalucía iconos">Andalucía iconos creados por Freepik - Flaticon</a>
+    </p>
     <script>
         //variable para acceder al componente del acordeón, que serán todos los objetos HTML que tengan
         //la clase 'accordion'
